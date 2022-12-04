@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71C77F7293CF46300428F7F /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C77F6293CF46300428F7F /* FavoriteButton.swift */; };
 		A76854D529320B4C00D60CF7 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76854D429320B4C00D60CF7 /* ModelData.swift */; };
 		A76854DA2932274C00D60CF7 /* LandMarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76854D92932274C00D60CF7 /* LandMarkRow.swift */; };
 		A76854DB2932287A00D60CF7 /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = A77F234D29313541004A8339 /* landmarkData.json */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A71C77F6293CF46300428F7F /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		A76854D429320B4C00D60CF7 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		A76854D92932274C00D60CF7 /* LandMarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMarkRow.swift; sourceTree = "<group>"; };
 		A76854DC29323CAC00D60CF7 /* LandMarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMarkListView.swift; sourceTree = "<group>"; };
@@ -53,9 +55,10 @@
 			children = (
 				A77F233D29312AD8004A8339 /* ContentView.swift */,
 				A76854D92932274C00D60CF7 /* LandMarkRow.swift */,
+				A76854DC29323CAC00D60CF7 /* LandMarkListView.swift */,
+				A71C77F6293CF46300428F7F /* FavoriteButton.swift */,
 				A77F234929312EFB004A8339 /* CircleImageView.swift */,
 				A76854DE293242E400D60CF7 /* LandMarkDetailView.swift */,
-				A76854DC29323CAC00D60CF7 /* LandMarkListView.swift */,
 				A77F234B29312F9E004A8339 /* MapView.swift */,
 			);
 			path = Views;
@@ -189,6 +192,7 @@
 				A76854DF293242E400D60CF7 /* LandMarkDetailView.swift in Sources */,
 				A77F233E29312AD8004A8339 /* ContentView.swift in Sources */,
 				A76854DA2932274C00D60CF7 /* LandMarkRow.swift in Sources */,
+				A71C77F7293CF46300428F7F /* FavoriteButton.swift in Sources */,
 				A76854DD29323CAC00D60CF7 /* LandMarkListView.swift in Sources */,
 				A77F234C29312F9E004A8339 /* MapView.swift in Sources */,
 				A77F234A29312EFB004A8339 /* CircleImageView.swift in Sources */,

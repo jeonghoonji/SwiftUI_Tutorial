@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct LandMarkDetailView: View {
+    
+    @EnvironmentObject var modelData : ModelData
+    
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
+    
+    var landmark : Landmark
     var body: some View {
-        VStack {
-            MapView()
+        ScrollView {
+            MapView(coordinate: landmark.locationCoordinate)
             //보라색 오류
             //Modifying state during view update, this will cause undefined behavior.
             // 예상은 SafeArea쪽으로 가서 건들이면 띄는거 같다!
@@ -19,36 +27,45 @@ struct LandMarkDetailView: View {
                 .frame(height: 300)
             
             
-            CircleImageView()
+            CircleImageView(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)  //이해완료 40%
             
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
-                    .font(.title)
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
                 
                 HStack {
-                    Text("Josh Tree National Park")
+                    Text(landmark.park)
                         .font(.subheadline)
                     Spacer()
-                    Text("california")
+                    Text(landmark.state)
                         .font(.subheadline)
                 }
                 
                 Divider()
-                Text("About Turtle Rock")
+                Text("About \(landmark.name)")
                     .font(.title2)
-                Text("Descriptive text goes here.")
+                Text(landmark.description)
                 
             }
             .padding()
-            Spacer()
+            
         }
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LandMarkDetailView_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
+    
     static var previews: some View {
-        LandMarkDetailView()
+        LandMarkDetailView(landmark: ModelData().landmarks[0])
+            .environmentObject(modelData)
     }
 }
